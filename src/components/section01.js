@@ -63,7 +63,7 @@ export const IntersectBox = React.memo(({visibleCallback, ...p})=>{
 
 		observer.observe($me.current);
 		return ()=>observer.unobserve($me.current);
-	},[]);
+	},[visibleCallback]);
 
 	return <IntersectBoxWrapper ref={$me} >
         {p.children}
